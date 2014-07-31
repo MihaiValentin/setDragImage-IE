@@ -1,0 +1,40 @@
+<html>
+<head>
+    <style>
+    #dragme {
+        width: 100px;
+        height: 100px;
+        background: #78ebff;
+        border: 1px solid #56bdff;
+        text-align: center;
+        line-height: 100px;
+        border-radius: 10px;
+    }
+    </style>
+    <script src="../setdragimage-ie.js"></script>
+</head>
+<body>
+
+<div id="dragme" draggable="true">
+    Drag me
+</div>
+
+<script>
+    // get the image
+    var image = new Image();
+    image.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==';
+
+    // preload it so it will be ready when it will first be used
+    setDragImageIEPreload(image);
+
+    document.getElementById('dragme').addEventListener('dragstart', function(ev) {
+        // just use it like you do in any browser that supports it
+        ev.dataTransfer.setDragImage(image, 10, 10);
+    });
+
+    document.body.addEventListener('dragover', function(ev) {
+        ev.preventDefault();
+    })
+</script>
+</body>
+</html>
