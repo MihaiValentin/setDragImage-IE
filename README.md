@@ -2,9 +2,9 @@
 
 If you plan to use HTML5 Drag & Drop in your app, you will find out the hard way that Internet Explorer does not support the `setDragImage` method, which on Firefox / Chrome shows an arbitrary image next to the cursor while dragging.
 
-This polyfill provides the same functionality for Internet Explorer.
+This polyfill provides the same functionality for Internet Explorer. It is less than 800 bytes compressed and gziped.
 
-##Why should you use?
+##Why should you use it?
 
 Generally the missing support for a drag image does not cause issues. However, there are cases when you want to give real feedback to the user related to what he is actually dragging. Let's say that if he drags one item, you should show an icon of a file, and when he drags multiple items you should show an icon of multiple files (and eventually a number). As Internet Explorer just shows as the drag element the element that is currently being dragged, the visual feedback can be confusing.
 

@@ -1,5 +1,8 @@
 /*global DataTransfer, DragEvent */
 
+/*! setDragImage-IE - polyfill for setDragImage method for Internet Explorer 10+
+ https://github.com/MihaiValentin/setDragImage-IE */
+
 /**
  * this method preloads the image, so it will be already loaded when we will use it as a drag image
  * @param image
