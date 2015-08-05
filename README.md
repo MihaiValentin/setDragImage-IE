@@ -6,7 +6,7 @@ This polyfill provides the same functionality for Internet Explorer. It is less 
 
 ##Why should you use it?
 
-Generally the missing support for a drag image does not cause issues. However, there are cases when you want to give real feedback to the user related to what he is actually dragging. Let's say that if he drags one item, you should show an icon of a file, and when he drags multiple items you should show an icon of multiple files (and eventually a number). As Internet Explorer just shows as the drag element the element that is currently being dragged, the visual feedback can be confusing.
+Generally the missing support for a drag image does not cause issues. However, there are cases when you want to give real feedback to the user related to what they are actually dragging. Let's say that if they drag one item, you should show an icon of a file, and when they drags multiple items you should show an icon of multiple files (and eventually a number). As Internet Explorer just shows as the drag element the element that is currently being dragged, the visual feedback can be confusing.
 
 ##Demo
 
