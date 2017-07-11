@@ -1,0 +1,23 @@
+{
+  "name": "setdragimage-ie",
+  "version": "1.0.0",
+  "description": "setDragImage support for Internet Explorer 10+",
+  "main": "setdragimage-ie.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MihaiValentin/setDragImage-IE"
+  },
+  "keywords": [
+    "setDragImage",
+    "Drag&Drop"
+  ],
+  "author": "Francesco Benedetto <francesco.benedetto@vendini.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/the-software-factory/setDragImage-IE/issues"
+  },
+  "homepage": "https://github.com/the-software-factory/setDragImage-IE#readme"
+}
