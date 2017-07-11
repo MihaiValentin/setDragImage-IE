@@ -1,18 +1,18 @@
-#setDragImage support for Internet Explorer 10+ Drag & Drop
+# setDragImage support for Internet Explorer 10+ Drag & Drop
 
 If you plan to use HTML5 Drag & Drop in your app, you will find out the hard way that Internet Explorer does not support the `setDragImage` method, which on Firefox / Chrome shows an arbitrary image next to the cursor while dragging.
 
 This polyfill provides the same functionality for Internet Explorer. It is less than 800 bytes compressed and gziped.
 
-##Why should you use it?
+## Why should you use it?
 
 Generally the missing support for a drag image does not cause issues. However, there are cases when you want to give real feedback to the user related to what they are actually dragging. Let's say that if they drag one item, you should show an icon of a file, and when they drag multiple items you should show an icon of multiple files (and eventually a number). As Internet Explorer just shows as the drag element the element that is currently being dragged, the visual feedback can be confusing.
 
-##Demo
+## Demo
 
 Check the demos in the `demo` folder
 
-##How to use it?
+## How to use it?
 
 * include `setdragimage-ie.js` in your project
 * outside the `dragstart` event, (preferably when your application loads), call `setDragImageIEPreload(img)` to preload the image which you will later use.
@@ -21,12 +21,15 @@ Check the demos in the `demo` folder
 * inside the `dragstart` event, just use `ev.dataTransfer.setDragImage(img, x, y)` as you'd do it for Chrome / Firefox
 * start dragging and you'll also get the drag image on Internet Explorer as well
 
-##How does this actually work?
+## Installation via NPM
+```npm install setdragimage-ie --save```
+
+## How does this actually work?
 
 I noticed that if you make a change to the element's style (adding a class that changes appearance) inside the `dragstart` event and then removing it immediately in a `setTimeout`, Internet Explorer will make a bitmap copy of the modified element and will use it for dragging.
 So, what this library actually does is implement the `setDragImage` method that changes the target's element style by adding a class that includes the image that you want to appear while dragging, and then removes it. In this way, the browser displays the temporary style of the element as the drag image.
 
-##Limitations
+## Limitations
 
 Due to the technical details described above, this polyfill has the following limitations / issues:
 
