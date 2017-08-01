@@ -26,7 +26,7 @@ Check the demos in the `demo` folder
 I noticed that if you make a change to the element's style (adding a class that changes appearance) inside the `dragstart` event and then removing it immediately in a `setTimeout`, Internet Explorer will make a bitmap copy of the modified element and will use it for dragging.
 So, what this library actually does is implement the `setDragImage` method that changes the target's element style by adding a class that includes the image that you want to appear while dragging, and then removes it. In this way, the browser displays the temporary style of the element as the drag image.
 
-# #Limitations
+## Limitations
 
 Due to the technical details described above, this polyfill has the following limitations / issues:
 
